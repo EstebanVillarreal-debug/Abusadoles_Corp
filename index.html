@@ -13,6 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -26,14 +27,12 @@
                         johannegro: '#090A14',
                         lau: '#ebbf44',
                         launegro: '#2e240a',
-                        nav1: '#c76e00',
-                        navmid: '#c8640c',
-                        nav2: '#c85a17',
-                        navhot: '#b8421f',
+                        nav1: '#0284C7',
+                        nav2: '#0369A1',
+                        navhot: '#1E40AF',
                         oscuro: '#2b1a0e',
-                        crema: '#fff4e0',
+                        crema: '#F4F6F8',
                         text: '#16232f',
-                        hue: '#fbf7f2',
                     },
                     fontFamily: {
                         display: ['Poppins', 'Segoe UI', 'sans-serif'],
@@ -44,14 +43,17 @@
             }
         };
     </script>
+    <script>
+        try { if (localStorage.getItem('tema') === 'dark') document.documentElement.classList.add('dark'); } catch (e) { }
+    </script>
     <title>Abusadores Corp</title>
 </head>
 
 <body
-    class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+    class="bg-crema dark:bg-[#121212] m-0 p-0 font-texto text-text dark:text-[#E0E0E0] flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
 
     <header
-        class="titulo w-full px-[34px] py-[14px] flex items-center justify-between gap-4 bg-gradient-to-r from-nav1 via-nav2 to-navhot rounded-b-[22px] shadow-[0_8px_20px_#fc8f006e] fixed top-0 left-0 z-10">
+        class="titulo w-full px-[34px] py-[14px] flex items-center justify-between gap-4 bg-gradient-to-r from-nav1 via-nav2 to-navhot dark:from-[#025a87] dark:via-[#024a73] dark:to-[#15307a] rounded-b-[22px] shadow-[0_8px_20px_#0284C7] dark:shadow-[0_8px_20px_rgba(0,0,0,0.6)] fixed top-0 left-0 z-10">
         <div class="text-left">
             <h1
                 class="m-0 font-titulo text-[clamp(24px,4vw,44px)] font-extrabold tracking-[1px] text-white leading-none">
@@ -59,7 +61,6 @@
             <p class="m-0 mt-1 font-titulo text-[clamp(11px,1.3vw,14px)] text-crema/90">
                 Más Abusadores y Abusados Que Nunca</p>
         </div>
-        <!-- Cambia el texto y el href del botón cuando sepan a dónde va -->
         <a href="#"
             class="shrink-0 border-2 border-white/50 text-white font-display font-semibold text-sm sm:text-base rounded-full px-4 sm:px-6 py-2 transition hover:bg-white/70 hover:text-nav2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
             ¿Seguro?</a>
@@ -70,23 +71,24 @@
 
         <!-- ¿Quiénes somos? -->
         <section>
-            <h2 class=" m-0 font-titulo font-extrabold text-oscuro leading-[1.05] text-[clamp(44px,6vw,84px)]">
-        <span class="block">¿Quiénes</span>
-        <span class="block pl-[2.2em]">somos?</span>
-        </h2>
-        <!-- Textos-->
-        <p class="mt-6 text-lg leading-relaxed max-w-[52ch]">
-            Integrantes: 5 (o los que quedan en pie).
-        </p>
-        <p class="mt-3 text-lg leading-relaxed max-w-[52ch]">
-            Nivel de código: Cuestionable.
-        </p>
-        <p class="mt-3 text-lg leading-relaxed max-w-[52ch]">
-            "Si funciona, nadie sabe por qué; si se rompe, culpa a claudio.".
-        </p>
-        <p class="mt-3 text-lg leading-relaxed max-w-[52ch]">
-            Uso de IA: Ocacionalmente.
-        </p>
+            <h2
+                class="m-0 font-titulo font-extrabold text-oscuro dark:text-[#E0E0E0] leading-[1.05] text-[clamp(44px,6vw,84px)]">
+                <span class="block">¿Quiénes</span>
+                <span class="block pl-[2.2em]">somos?</span>
+            </h2>
+            <!-- Textos-->
+            <p class="mt-6 text-lg leading-relaxed max-w-[52ch]">
+                Integrantes: 5 (o los que quedan en pie).
+            </p>
+            <p class="mt-3 text-lg leading-relaxed max-w-[52ch]">
+                Nivel de código: Cuestionable.
+            </p>
+            <p class="mt-3 text-lg leading-relaxed max-w-[52ch]">
+                "Si funciona, nadie sabe por qué; si se rompe, culpa a claudio.".
+            </p>
+            <p class="mt-3 text-lg leading-relaxed max-w-[52ch]">
+                Uso de IA: Ocacionalmente.
+            </p>
         </section>
 
         <!-- Integrantes -->
@@ -95,7 +97,7 @@
 
             <!-- Esteban -->
             <div
-                class="flex flex-col gap-3 p-3.5 rounded-[22px] bg-estebannegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#00674F,0_0_32px_6px_#00674F99] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                class="flex flex-col gap-3 p-3.5 rounded-[22px] dark:ring-1 dark:ring-white/10 bg-estebannegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#00674F,0_0_32px_6px_#00674F99] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
                 <h3 class="m-0 font-display font-bold text-lg text-left">Esteban</h3>
                 <a href="#esteban" aria-label="Ver más de Esteban"
                     class="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -105,7 +107,7 @@
 
             <!-- Sara -->
             <div
-                class="flex flex-col gap-3 p-3.5 rounded-[22px] bg-saranegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#880808,0_0_32px_6px_#88080899] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                class="flex flex-col gap-3 p-3.5 rounded-[22px] dark:ring-1 dark:ring-white/10 bg-saranegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#880808,0_0_32px_6px_#88080899] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
                 <h3 class="m-0 font-display font-bold text-lg text-left">Sara</h3>
                 <a href="#sara" aria-label="Ver más de Esteban"
                     class="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -115,7 +117,7 @@
 
             <!-- Lulo -->
             <div
-                class="flex flex-col gap-3 p-3.5 rounded-[22px] bg-lulonegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#6f6f6f,0_0_32px_6px_#6f6f6f99] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                class="flex flex-col gap-3 p-3.5 rounded-[22px] dark:ring-1 dark:ring-white/10 bg-lulonegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#6f6f6f,0_0_32px_6px_#6f6f6f99] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
                 <h3 class="m-0 font-display font-bold text-lg text-left">Lulo</h3>
                 <a href="#lulo" aria-label="Ver más de Esteban"
                     class="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -125,7 +127,7 @@
 
             <!-- Johan -->
             <div
-                class="flex flex-col gap-3 p-3.5 rounded-[22px] bg-johannegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#3f4a9e,0_0_32px_6px_#3f4a9e99] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                class="flex flex-col gap-3 p-3.5 rounded-[22px] dark:ring-1 dark:ring-white/10 bg-johannegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#3f4a9e,0_0_32px_6px_#3f4a9e99] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
                 <h3 class="m-0 font-display font-bold text-lg text-left">Johan</h3>
                 <a href="#johan" aria-label="Ver más de Esteban"
                     class="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -135,8 +137,8 @@
 
             <!-- Lau -->
             <div
-                class="flex flex-col gap-3 p-3.5 rounded-[22px] bg-launegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#ebbf44,0_0_32px_6px_#ebbf4499] motion-reduce:transition-none motion-reduce:hover:translate-y-0 col-span-2 sm:col-span-1">
-                <h3 class="m-0 font-display font-bold text-lg text-left">Lau</h3>
+                class="flex flex-col gap-3 p-3.5 rounded-[22px] dark:ring-1 dark:ring-white/10 bg-launegro text-white shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_0_2px_#ebbf44,0_0_32px_6px_#ebbf4499] motion-reduce:transition-none motion-reduce:hover:translate-y-0 col-span-2 sm:col-span-1">
+                <h3 class="m-0 font-display font-bold text-lg text-left">Laura</h3>
                 <a href="#lau" aria-label="Ver más de Esteban"
                     class="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                     <img src="img/" alt="Laura" class="w-full aspect-[1.5/4] object-cover rounded-2xl">
@@ -149,95 +151,114 @@
     <!-- recuadros sobre nosotros -->
     <div class="w-full flex flex-col gap-6 px-4 sm:px-6 pb-6">
 
-    <!-- Esteban -->
-    <section id="esteban"
-        class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] bg-estebannegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)]">
-        <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
-            <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Esteban</h2>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <a href="#inicio" class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
-        </div>
-        <div class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-esteban to-estebannegro border-esteban border-t-8 lg:border-t-0 lg:border-l-8">
-            <img src="img/" alt="Esteban" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-    </section>
+        <!-- Esteban -->
+        <section id="esteban"
+            class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] dark:ring-1 dark:ring-white/10 bg-estebannegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:shadow-[0_0_0_2px_#00674F,0_0_24px_2px_#00674F99] motion-reduce:transition-none">
+            <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
+                <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Esteban</h2>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <a href="#inicio"
+                    class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
+            </div>
+            <div
+                class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-esteban to-estebannegro border-esteban border-t-8 lg:border-t-0 lg:border-l-8">
+                <img src="img/" alt="Esteban" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </section>
 
-    <!-- Sara -->
-    <section id="sara"
-        class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] bg-saranegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)]">
-        <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
-            <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Sara</h2>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <a href="#inicio" class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
-        </div>
-        <div class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-sara to-saranegro border-sara border-t-8 lg:border-t-0 lg:border-l-8">
-            <img src="img/" alt="Sara" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-    </section>
+        <!-- Sara -->
+        <section id="sara"
+            class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] dark:ring-1 dark:ring-white/10 bg-saranegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:shadow-[0_0_0_2px_#880808,0_0_24px_2px_#88080899] motion-reduce:transition-none">
+            <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
+                <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Sara</h2>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <a href="#inicio"
+                    class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
+            </div>
+            <div
+                class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-sara to-saranegro border-sara border-t-8 lg:border-t-0 lg:border-l-8">
+                <img src="img/" alt="Sara" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </section>
 
-    <!-- Lulo -->
-    <section id="lulo"
-        class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] bg-lulonegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)]">
-        <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
-            <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Alejandro</h2>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <a href="#inicio" class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
-        </div>
-        <div class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-lulo to-lulonegro border-lulo border-t-8 lg:border-t-0 lg:border-l-8">
-            <img src="img/" alt="Lulo" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-    </section>
+        <!-- Lulo -->
+        <section id="lulo"
+            class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] dark:ring-1 dark:ring-white/10 bg-lulonegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:shadow-[0_0_0_2px_#6f6f6f,0_0_24px_2px_#6f6f6f99] motion-reduce:transition-none">
+            <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
+                <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Alejandro</h2>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <a href="#inicio"
+                    class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
+            </div>
+            <div
+                class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-lulo to-lulonegro border-lulo border-t-8 lg:border-t-0 lg:border-l-8">
+                <img src="img/" alt="Lulo" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </section>
 
-    <!-- Johan -->
-    <section id="johan"
-        class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] bg-johannegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)]">
-        <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
-            <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Johan</h2>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <a href="#inicio" class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
-        </div>
-        <div class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-[#3f4a9e] to-johannegro border-[#3f4a9e] border-t-8 lg:border-t-0 lg:border-l-8">
-            <img src="img/" alt="Johan" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-    </section>
+        <!-- Johan -->
+        <section id="johan"
+            class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] dark:ring-1 dark:ring-white/10 bg-johannegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:shadow-[0_0_0_2px_#3f4a9e,0_0_24px_2px_#3f4a9e99] motion-reduce:transition-none">
+            <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
+                <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Johan</h2>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <a href="#inicio"
+                    class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
+            </div>
+            <div
+                class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-[#3f4a9e] to-johannegro border-[#3f4a9e] border-t-8 lg:border-t-0 lg:border-l-8">
+                <img src="img/" alt="Johan" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </section>
 
-    <!-- Lau -->
-    <section id="lau"
-        class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] bg-launegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)]">
-        <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
-            <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Lau</h2>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
-            <a href="#inicio" class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
-                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
-        </div>
-        <div class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-lau to-launegro border-lau border-t-8 lg:border-t-0 lg:border-l-8">
-            <img src="img/" alt="Laura" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-    </section>
+        <!-- Lau -->
+        <section id="lau"
+            class="scroll-mt-[130px] min-h-[calc(100dvh-154px)] grid lg:grid-cols-[1.1fr_1fr] overflow-hidden rounded-[28px] dark:ring-1 dark:ring-white/10 bg-launegro text-white text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)] transition duration-300 ease-out hover:shadow-[0_0_0_2px_#ebbf44,0_0_24px_2px_#ebbf4499] motion-reduce:transition-none">
+            <div class="p-8 sm:p-12 flex flex-col justify-center gap-5">
+                <h2 class="m-0 font-titulo font-extrabold leading-none text-[clamp(48px,7vw,96px)]">Lau</h2>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <p class="m-0 text-xl leading-relaxed text-white/80 max-w-[52ch]">textotextoso.</p>
+                <a href="#inicio"
+                    class="mt-2 self-start inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Volver a los integrantes</a>
+            </div>
+            <div
+                class="relative min-h-[360px] lg:min-h-0 bg-gradient-to-br from-lau to-launegro border-lau border-t-8 lg:border-t-0 lg:border-l-8">
+                <img src="img/" alt="Laura" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+        </section>
 
     </div>
 
     <button id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"
-        class="fixed bottom-5 left-5 z-20 w-12 h-12 rounded-full grid place-items-center text-xl text-white bg-gradient-to-br from-nav1 to-navhot shadow-[0_8px_20px_#fc8f006e] transition duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nav2 motion-reduce:transition-none">
+        class="fixed bottom-5 left-5 z-20 w-12 h-12 rounded-full grid place-items-center text-xl text-white bg-gradient-to-br from-nav1 to-navhot shadow-[0_8px_20px_#0284C799] focus-visible:outline-nav2 transition duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nav2 motion-reduce:transition-none">
         <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i>
     </button>
 
+    <!-- tal vez chistes xd o una foto grupal no sé -->
+    <section id="nueva-seccion"
+        class="scroll-mt-[130px] min-h-[320px] p-8 sm:p-12 rounded-[28px] bg-white dark:bg-[#1C1C1C] ring-1 ring-black/10 dark:ring-white/10 text-left shadow-[0_8px_20px_rgba(43,26,14,0.18)] mb-[25px]">
+        <h2
+            class="m-0 font-titulo font-extrabold leading-none text-oscuro dark:text-[#E0E0E0] text-[clamp(36px,5vw,64px)]">
+            vainas por definir xd
+        </h2>
+    </section>
+
     <footer
-        class="w-full mt-auto px-5 sm:px-[34px] pt-8 pb-24 sm:pb-8 bg-gradient-to-r from-[#6e3c00] via-[#6e320d] to-[#652411] rounded-t-[22px] shadow-[0_-8px_20px_rgba(43,26,14,0.35)] text-white">
+        class="w-full mt-auto px-5 sm:px-[34px] pt-8 pb-24 sm:pb-8 bg-gradient-to-r from-[#0a3a52] via-[#08304a] to-[#06263f] dark:from-[#0b2636] dark:via-[#091f2d] dark:to-[#071722] rounded-t-[22px] shadow-[0_-8px_20px_rgba(6,38,63,0.45)] dark:border-t dark:border-white/10 text-white">
 
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div class="text-left">
@@ -266,7 +287,7 @@
                     <li>
                         <a href="#" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-display font-semibold text-white bg-lulo transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_#6f6f6f99] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>Lulo</a>
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>Alejandro</a>
                     </li>
 
                     <!-- Johan -->
